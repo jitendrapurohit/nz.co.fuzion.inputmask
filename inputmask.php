@@ -13,6 +13,9 @@ function inputmask_civicrm_config(&$config) {
 }
 
 function inputmask_civicrm_buildForm($formName, &$form) {
+  //CRM_Core_Resources::singleton()->addScriptUrl('https://code.jquery.com/jquery-1.11.0.js', 0, 'html-header');
+  CRM_Core_Resources::singleton()->addScriptUrl('https://rawgit.com/RobinHerbots/jquery.inputmask/4.x/dist/jquery.inputmask.bundle.js', 0, 'html-header');
+
   $templatePath = realpath(dirname(__FILE__)."/templates");
   // dynamically insert a template block in the page
   CRM_Core_Region::instance('page-body')->add(array(
